@@ -1,0 +1,56 @@
+* {
+    margin: auto;
+    padding: 0px;    
+    box-sizing: border-box;
+}
+
+.app {
+    height: 100vh;
+}
+
+.title h1{
+    color: brown;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+/*css card individual*/
+div.card{
+    height: 425px;
+    width: 220px;
+    padding: 10px;
+    margin: 25px;
+    margin-right: auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border: transparent;
+    transition: 0.5s;
+}
+
+div.card:hover{
+    box-shadow: 1px 1px 4px 1px #d1cfcf;
+}
+
+div.card img {
+    height: 225px;
+    width: auto;
+}
+
+div.card .card-body {
+    height: 200px;
+}
+
+div.card .card-title {
+    color:brown;
+    font-weight: bold;
+}
+
+div.card .card-price {
+    color: black;
+    font-weight: bold;
+    font-size: larger;
+}
