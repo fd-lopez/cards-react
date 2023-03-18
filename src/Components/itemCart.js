@@ -1,6 +1,4 @@
 //listado de compras
-import React from "react";
-
 const ItemCart=({data, deleteFromCart})=>{
     const {id, title, price, quantity}=data;
     return(

@@ -1,12 +1,11 @@
 import Title from "./Components/Title";
-import Cards from "./Components/Cards";
-import "./App.css"
+import Cart from "./Components/Cart"
 
 function App() {
   return (
-    <div className="app">
+    <div>
       <Title title="Nuevos lanzamientos"/>
-      <Cards/>
+      <Cart/>
     </div>
   );
 }
