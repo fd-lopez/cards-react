@@ -4,6 +4,8 @@ import { cartReducer } from "./cartReducer";
 import ItemCart from "./itemCart";
 import Products from "./products";
 import { TYPES } from "./actions";
+import Title from "./Title"
+import cartImg from "./image/carrito-de-compras.png"
 
 const Cart = () =>{
     
@@ -27,18 +29,18 @@ const clearCart=()=>{dispatch({type:TYPES.CLEAR_CART})};//Limpiar carrito, reset
 
     return(
         <div>
-            <h1>Shopping Cart</h1>
-            <h2>Products</h2>
-            {/*mapeo de productos para agregar*/}
-            <div>
-                {products.map((product)=><Products key={product.id} data={product} addToCart={addToCart}/>)}
-            </div>
-            <h2>Carrito</h2>
+            <img style={{height:75}} src={cartImg} alt="/"></img>
             {/*mapeo de productos agregados*/}
             <div>
                 {cart.map(item=><ItemCart key={item.id} data={item} deleteFromCart={deleteFromCart}/>)}
             </div>
             <button onClick={clearCart}>Clear Cart</button>
+            <Title title="Nuevos lanzamientos"/>
+            {/*mapeo de productos para agregar*/}
+            <div>
+                {products.map((product)=><Products key={product.id} data={product} addToCart={addToCart}/>)}
+            </div>
+            
         </div>
     )
 }

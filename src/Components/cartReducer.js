@@ -31,7 +31,7 @@ export function cartReducer(state, action){
         }
         case TYPES.REMOVE_ITEM:{
             const itemDelete=state.cart.find((item)=>item.id===action.payload);
-            return itemDelete.quantity>1?{...state, cart:state.cart.map((item)=>item.id===action.payload?{...item, quantity:item.quantity-1}:{item},)}:{...state, cart:state.cart.filter((item)=>item.id!==action.payload)};
+            return itemDelete.quantity>1?{...state, cart:state.cart.map((item)=>item.id===action.payload?{...item, quantity:item.quantity-1}:item,)}:{...state, cart:state.cart.filter((item)=>item.id!==action.payload)};
         }
         case TYPES.REMOVE_ALL_ITEM:{
             return {
